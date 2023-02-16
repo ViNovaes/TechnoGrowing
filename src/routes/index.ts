@@ -28,13 +28,14 @@ router.get('/confirmCad',homeController.confirmCad)
 
 router.get('/cadFinalizado',homeController.cadFinalizado)
 
-//rotas de visualização login e register
 router.get('/login',authController.login)
+// router.get('/login',ongController.login)
 
 router.get('/contaUsuario',authController.contaUsuario)
 
 //criando o post do register
 router.post('/contaUsuario',authController.contaUsuarioPost)
+router.post('/contaOng',ongController.contaOngPost)
 
 
 export default router

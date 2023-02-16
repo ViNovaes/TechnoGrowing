@@ -38,10 +38,10 @@
         <div class="geral">
             <div class="container1">
                 <div class="texto">Cadastar Ong</div>
-                <form action="#">
+                <form action="/contaOng" method="post">
                     <div class="data">
                         <label>Nome da ONG</label>
-                        <input type="text" placeholder="Nome" required>
+                        <input type="text" name="Nome" placeholder="Nome" required>
                     </div>
                     <div class="data2">
                         <label>Envie sua logo (PNG e JPG)</label>
@@ -49,27 +49,33 @@
                     </div>
                     <div class="data">
                         <label>Seu melhor Email</label>
-                        <input type="text" name="email" id="msgemail" onblur="validacaoEmail(f1.email)" required placeholder="Email">
+                        <input type="text" name="Email" id="msgemail" onblur="validacaoEmail(f1.email)" required placeholder="Email">
                     </div>
                     <div class="data">
                         <label>Sua Senha</label>
-                        <input type="password" placeholder="Senha" required>
+                        <input type="password" name="password" placeholder="Senha" required>
                     </div>
                     <div class="data">
                         <label>Confirme sua Senha</label>
-                        <input type="password" placeholder="Confirmar senha" required>
+                        <input type="password" name="confirmpassword" placeholder="Confirmar senha" required>
                     </div>
                     <div class="data">
                         <label>Telefone com DDD</label>
-                        <input id="id_lock" name="id_lock" required placeholder="Telefone com DDD" class="verifica_numerico" required="" type="text" maxlength="14" onKeyPress="MascaraGenerica(this, 'TELEFONE');">
+                        <input id="id_lock" name="Tel" required placeholder="Telefone com DDD">
                     </div>
+                    <!-- class="verifica_numerico" required="" type="text" maxlength="14" onKeyPress="MascaraGenerica(this, 'TELEFONE');" 
+                    class="verifica_numerico"  maxlength="18" onKeyPress="MascaraGenerica(this, 'CNPJ');"
+                    class="verifica_numerico" type="text" maxlength="10" onKeyPress="MascaraGenerica(this, 'CEP');"
+
+                    
+                    -->
                         <div class="data">
                     <label>Seu CNPJ</label>
-                        <input id="id_lock" name="id_lock" placeholder="CNPJ" class="verifica_numerico" type="text" maxlength="18" onKeyPress="MascaraGenerica(this, 'CNPJ');">
+                        <input type="text" id="id_lock" placeholder="CNPJ" >
                     </div>
                     <div class="data">
                         <label>Escolha sua Categoria</label>
-                        <select id="class">
+                        <select id="class" name="Categoria">
                             <option>...</option>
                             <option value="animais">Animais</option>
                             <option value="reabilitacao">Reabilitação</option>
@@ -81,25 +87,25 @@
                         <input type="text" placeholder="Endereço" name="endereco" required>
                     </div>
                     <div class="data">
-                        <input type="text" placeholder="Numero" required>
+                        <input type="text" name="Numero" placeholder="Numero" required>
                     </div>
                     <div class="data">
-                        <input type="text" placeholder="Complemento" required>
+                        <input type="text" name="Complemento" placeholder="Complemento" required>
                     </div>
                     <div class="data">
-                        <input id="id_lock" name="cep" placeholder="CEP" class="verifica_numerico" type="text" maxlength="10" onKeyPress="MascaraGenerica(this, 'CEP');">
+                        <input id="id_lock" name="CEP" placeholder="CEP">
                     </div>
                     <div class="data">
                         <label>Seu Bairro</label>
-                        <input type="text" placeholder="Bairro" required>
+                        <input type="text" name="Bairro" placeholder="Bairro" required>
                     </div>
                     <div class="data">
                         <label>Sua Cidade</label>
-                        <input type="text" placeholder="Cidade" required>
+                        <input type="text" name="Cidade" placeholder="Cidade" required>
                     </div>
                     <div class="data">
                         <label>Escolha uma rede Social</label>
-                        <select id="redeSocial">
+                        <select id="redeSocial" name="RedeSocial">
                             <option>...</option>
                             <option value="facebook">Facebook</option>
                             <option value="linkedln">Linkedln</option>
@@ -108,17 +114,21 @@
                     </div>
                     <div class="data">
                         <label>Seu Site, se tiver</label>
-                        <input type="url" placeholder="Web Site">
+                        <input type="url" name="WebSite" placeholder="Web Site">
                     </div>
                     <div class="data">
                         <label>Link da sua rede Social</label>
-                        <input type="url" placeholder="Link">
+                        <input type="url" name="Url" placeholder="Link">
                     </div>
                     <div class="data">
-                        <textarea name="" id="" cols="10" rows="5" placeholder="Sobre Sua Ong" required></textarea>
+                        <textarea name="Descricao" id="" cols="10" rows="5" placeholder="Sobre Sua Ong" required></textarea>
                     </div>
                     <div class="btn">
-                        <a href="../"><button type="submit" id="enviar">Enviar</button></a>
+                        <button type="submit" id="enviar">Enviar</button></a>
+                    </div>
+
+                    <div>
+                        {{message}}
                     </div>
                 </form>
             </div>
@@ -130,7 +140,7 @@
         <div class="outraPagina">
             <div class="title2">Não é ONG? Crie como Usuario:</div>
             <div class="btn2">
-                <a href="../contato"><button type="submit" id="contato">Sou Usuario</button></a>
+                <a href="../contaUsuario"><button type="submit" id="contato">Sou Usuario</button></a>
             </div>
         </div>
         <!--Conteudo da pagina-->

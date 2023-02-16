@@ -1,91 +1,101 @@
+import { url } from "inspector";
 import { StringifyOptions } from "querystring";
 import { Model, DataTypes } from "sequelize";
 
 import { sequelize } from "../instances/mysql";
 
 export interface OngInstance extends Model{
-    codOng: number,
-    nome: String,
-    email: String,
-    tel: number,
-    cnpj: number,
-    numero: string,
-    complemento: string,
-    cep: string,
-    bairro: string,
-    cidade: string,
-    categoria: String,
-    descricao: String,
-    webSite: String,
-    redeSocial: String,
-    url: String,
+    codONG: number,
+    Nome: String,
+    Email: String,
+    password: string,
+    Tel: number,
+    CNPJ: number,
+    Endereco: string,
+    Numero: string,
+    Complemento: string,
+    CEP: string,
+    Bairro: string,
+    Cidade: string,
+    Categoria: String,
+    Descricao: String,
+    WebSite: String,
+    RedeSocial: String,
+    Url: String,
 }
 
 export const Ong = sequelize.define<OngInstance>("Ong,",{
-    codOng:{
+    codONG:{
         primaryKey:true,
         type:DataTypes.INTEGER,
         allowNull:false
     },
-    nome:{
+    Nome:{
         type:DataTypes.STRING,
         allowNull:false
     },
-    email:{
+    Email:{
         type:DataTypes.STRING,
         allowNull:false
     },
-    tel:{
+    password:{
+        type:DataTypes.STRING,
+        allowNull:false
+    },
+    Tel:{
         type:DataTypes.INTEGER,
         allowNull:false
     },
-    cnpj:{
+    CNPJ:{
         type:DataTypes.INTEGER,
         allowNull:false
     },
-    endereco:{
+    Endereco:{
         type:DataTypes.STRING,
         allowNull:false
     },
-    categoria:{
+    Numero:{
         type:DataTypes.STRING,
         allowNull:false
     },
-    descricao:{
+    Complemento:{
         type:DataTypes.STRING,
         allowNull:false
     },
-    webSite:{
+    CEP:{
         type:DataTypes.STRING,
         allowNull:false
     },
-    redeSocial:{
+    Bairro:{
         type:DataTypes.STRING,
         allowNull:false
     },
-    codFunc:{
-        type:DataTypes.INTEGER,
-        allowNull:false
-    },
-    cep:{
+    Cidade:{
         type:DataTypes.STRING,
         allowNull:false
     },
-    bairro:{
+    Categoria:{
         type:DataTypes.STRING,
         allowNull:false
     },
-    cidade:{
+    Descricao:{
         type:DataTypes.STRING,
         allowNull:false
     },
-    complemento:{
+    WebSite:{
+        type:DataTypes.STRING,
+    },
+    RedeSocial:{
         type:DataTypes.STRING,
         allowNull:false
     },
+    Url:{
+        type:DataTypes.STRING,
+        allowNull:false
+    }
 
 
 },{
-    tableName:'tbONG',
+    tableName:'tbong',
     timestamps: false
 })
