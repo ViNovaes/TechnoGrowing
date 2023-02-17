@@ -5,18 +5,18 @@ import { Model, DataTypes } from "sequelize";
 import { sequelize } from "../instances/mysql";
 
 export interface OngInstance extends Model{
-    codONG: number,
+    codONG: Number,
     Nome: String,
     Email: String,
-    password: string,
-    Tel: number,
-    CNPJ: number,
-    Endereco: string,
-    Numero: string,
-    Complemento: string,
-    CEP: string,
-    Bairro: string,
-    Cidade: string,
+    password: String,
+    Tel: string,
+    CNPJ: string,
+    Endereco: String,
+    Numero: String,
+    Complemento: String,
+    CEP: String,
+    Bairro: String,
+    Cidade: String,
     Categoria: String,
     Descricao: String,
     WebSite: String,
@@ -26,9 +26,9 @@ export interface OngInstance extends Model{
 
 export const Ong = sequelize.define<OngInstance>("Ong,",{
     codONG:{
-        primaryKey:true,
         type:DataTypes.INTEGER,
-        allowNull:false
+        primaryKey:true,
+        autoIncrement:true
     },
     Nome:{
         type:DataTypes.STRING,
@@ -43,16 +43,14 @@ export const Ong = sequelize.define<OngInstance>("Ong,",{
         allowNull:false
     },
     Tel:{
-        type:DataTypes.INTEGER,
+        type:DataTypes.STRING,
         allowNull:false
     },
     CNPJ:{
-        type:DataTypes.INTEGER,
-        allowNull:false
+        type:DataTypes.STRING,
     },
     Endereco:{
         type:DataTypes.STRING,
-        allowNull:false
     },
     Numero:{
         type:DataTypes.STRING,
@@ -87,15 +85,13 @@ export const Ong = sequelize.define<OngInstance>("Ong,",{
     },
     RedeSocial:{
         type:DataTypes.STRING,
-        allowNull:false
     },
     Url:{
         type:DataTypes.STRING,
-        allowNull:false
     }
 
 
 },{
-    tableName:'tbong',
-    timestamps: false
+    tableName: "tbong",
+    timestamps:false
 })

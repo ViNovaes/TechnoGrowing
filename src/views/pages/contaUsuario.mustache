@@ -61,11 +61,11 @@
                     </div>
                     <div class="data">
                         <label>Seu CPF</label>
-                        <input id="id_lock" name="CPF" required placeholder="CPF" type="text" maxlength="14">
+                        <input id="id_lock" name="CPF" placeholder="CPF" type="text" maxlength="14" required>
                     </div>
                     <div class="data">
                         <label>Telefone com DDD</label>
-                        <input id="id_lock" name="Tel" required placeholder="Telefone" type="text" maxlength="14" >
+                        <input id="id_lock" name="Tel" placeholder="Telefone" type="text" maxlength="14" required>
                     </div>
                     <div class="data">
                         <label>Escolha uma rede Social</label>
@@ -94,7 +94,10 @@
                         <button type="submit" id="enviar">Enviar</button>
                     </div>
                     <div>
-                        {{message}}
+                        <script>
+                            alert("{{message}}")
+                        </script>
+                        
                     </div>
                 </form>
             </div>
@@ -103,7 +106,7 @@
         <div class="outraPagina">
             <div class="title2">Não é Voluntario? Crie como ONG:</div>
             <div class="btn2">
-                <a href="../CriarConstaOng"><button type="submit" id="contato">Sou ONG</button></a>
+                <a href="../ContaOng"><button type="submit" id="contato">Sou ONG</button></a>
             </div>
         </div>
 

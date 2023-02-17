@@ -43,13 +43,13 @@
                         <label>Nome da ONG</label>
                         <input type="text" name="Nome" placeholder="Nome" required>
                     </div>
-                    <div class="data2">
+                    <!-- <div class="data2">
                         <label>Envie sua logo (PNG e JPG)</label>
                         <input type="file" accept="image/png,image/jpeg">
-                    </div>
+                    </div> -->
                     <div class="data">
                         <label>Seu melhor Email</label>
-                        <input type="text" name="Email" id="msgemail" onblur="validacaoEmail(f1.email)" required placeholder="Email">
+                        <input type="text" name="Email"  required placeholder="Email">
                     </div>
                     <div class="data">
                         <label>Sua Senha</label>
@@ -61,17 +61,17 @@
                     </div>
                     <div class="data">
                         <label>Telefone com DDD</label>
-                        <input id="id_lock" name="Tel" required placeholder="Telefone com DDD">
+                        <input id="id_lock" name="Tel" required placeholder="Telefone com DDD" maxlength="11">
                     </div>
                     <!-- class="verifica_numerico" required="" type="text" maxlength="14" onKeyPress="MascaraGenerica(this, 'TELEFONE');" 
                     class="verifica_numerico"  maxlength="18" onKeyPress="MascaraGenerica(this, 'CNPJ');"
                     class="verifica_numerico" type="text" maxlength="10" onKeyPress="MascaraGenerica(this, 'CEP');"
-
+                    id="msgemail" onblur="validacaoEmail(f1.email)"
                     
                     -->
                         <div class="data">
                     <label>Seu CNPJ</label>
-                        <input type="text" id="id_lock" placeholder="CNPJ" >
+                        <input type="text" name="CNPJ" id="id_lock" placeholder="CNPJ" maxlength="14">
                     </div>
                     <div class="data">
                         <label>Escolha sua Categoria</label>
@@ -93,7 +93,7 @@
                         <input type="text" name="Complemento" placeholder="Complemento" required>
                     </div>
                     <div class="data">
-                        <input id="id_lock" name="CEP" placeholder="CEP">
+                        <input id="id_lock" name="CEP" placeholder="CEP" maxlength="">
                     </div>
                     <div class="data">
                         <label>Seu Bairro</label>

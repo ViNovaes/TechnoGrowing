@@ -1,13 +1,8 @@
-import { Request, Response } from 'express';
-import { Ong } from '../models/Ong';
-
-// export const contaOng = (req:Request, res:Response) =>{
-//     res.render('pages/ContaOng')
-// }
-
+import { Request, Response } from "express"
+import { Ong } from "../models/Ong"
 import bcrypt from 'bcrypt'
 
-//rotas de visualização login e register
+
 export const login = (req:Request, res:Response) =>{
 
     res.render('pages/login')
@@ -100,7 +95,7 @@ export const contaOngPost = async (req:Request, res:Response) =>{
         //para garantir que meu usuário seja salvo
         //antes de redirecioná-lo para /
         req.session.save(() =>{
-            res.redirect('/')
+            res.redirect('/cadfinalizado')
         })
 
 

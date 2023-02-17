@@ -1,9 +1,7 @@
 import { Request, Response } from "express"
 import { Voluntario } from "../models/Voluntario"
-
 import bcrypt from 'bcrypt'
 
-//rotas de visualização login e register
 export const login = (req:Request, res:Response) =>{
 
     res.render('pages/login')
@@ -89,7 +87,7 @@ export const contaUsuarioPost = async (req:Request, res:Response) =>{
         //para garantir que meu usuário seja salvo
         //antes de redirecioná-lo para /
         req.session.save(() =>{
-            res.redirect('/')
+            res.redirect('/cadFinalizado')
         })
 
 

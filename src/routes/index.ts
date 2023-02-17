@@ -10,8 +10,6 @@ const router = Router()
 
 router.get('/',homeController.home)
 
-router.get('/criarContaOng',ongController.contaOng)
-
 router.get('/perfil',homeController.perfil)
 
 router.get('/sobre',homeController.sobre)
