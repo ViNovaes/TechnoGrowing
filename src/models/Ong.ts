@@ -17,6 +17,7 @@ export interface OngInstance extends Model{
     CEP: String,
     Bairro: String,
     Cidade: String,
+    Estado: String,
     Categoria: String,
     Descricao: String,
     WebSite: String,
@@ -48,9 +49,11 @@ export const Ong = sequelize.define<OngInstance>("Ong,",{
     },
     CNPJ:{
         type:DataTypes.STRING,
+        allowNull:false
     },
     Endereco:{
         type:DataTypes.STRING,
+        allowNull:false
     },
     Numero:{
         type:DataTypes.STRING,
@@ -71,6 +74,10 @@ export const Ong = sequelize.define<OngInstance>("Ong,",{
     Cidade:{
         type:DataTypes.STRING,
         allowNull:false
+    },
+    Estado:{
+    type:DataTypes.STRING,
+    allowNull:false
     },
     Categoria:{
         type:DataTypes.STRING,

@@ -48,11 +48,11 @@
                         <input type="file" accept="image/png,image/jpeg">
                     </div> -->
                     <div class="data">
-                        <label>Seu melhor Email</label>
+                        <label>Email</label>
                         <input type="text" name="Email"  required placeholder="Email">
                     </div>
                     <div class="data">
-                        <label>Sua Senha</label>
+                        <label>Senha</label>
                         <input type="password" name="password" placeholder="Senha" required>
                     </div>
                     <div class="data">
@@ -60,18 +60,12 @@
                         <input type="password" name="confirmpassword" placeholder="Confirmar senha" required>
                     </div>
                     <div class="data">
-                        <label>Telefone com DDD</label>
-                        <input id="id_lock" name="Tel" required placeholder="Telefone com DDD" maxlength="11">
+                        <label>Telefone</label>
+                        <input name="Tel" required placeholder="Telefone ou celular" class="verifica_numerico" required="" type="text" maxlength="15" onKeyPress="MascaraGenerica(this, 'CELULAR');">
                     </div>
-                    <!-- class="verifica_numerico" required="" type="text" maxlength="14" onKeyPress="MascaraGenerica(this, 'TELEFONE');" 
-                    class="verifica_numerico"  maxlength="18" onKeyPress="MascaraGenerica(this, 'CNPJ');"
-                    class="verifica_numerico" type="text" maxlength="10" onKeyPress="MascaraGenerica(this, 'CEP');"
-                    id="msgemail" onblur="validacaoEmail(f1.email)"
-                    
-                    -->
                         <div class="data">
-                    <label>Seu CNPJ</label>
-                        <input type="text" name="CNPJ" id="id_lock" placeholder="CNPJ" maxlength="14">
+                    <label>CNPJ</label>
+                        <input type="text" name="CNPJ" placeholder="CNPJ" class="verifica_numerico" type="text" maxlength="18" onKeyPress="MascaraGenerica(this, 'CNPJ');">
                     </div>
                     <div class="data">
                         <label>Escolha sua Categoria</label>
@@ -79,32 +73,44 @@
                             <option>...</option>
                             <option value="animais">Animais</option>
                             <option value="reabilitacao">Reabilitação</option>
-                            <option value="lgbt">LGBT</option>
+                            <option value="lgbt">LGBT+</option>
+                            <option value="MeioAmbuiente">Meio Ambientes</option>
+                            <option value="SeresHumanos">Seres Humanos</option>
+                            <option value="Genero">Genero</option>
+                            <option value="Escolar">Escolar</option>
                         </select>
                     </div>
                     <div class="data">
-                        <label>Seu Endereço</label>
-                        <input type="text" placeholder="Endereço" name="endereco" required>
+                        <label>CEP</label>
+                        <input name="CEP" placeholder="CEP" class="verifica_numerico" type="text" maxlength="9" onKeyPress="MascaraGenerica(this, 'CEP');">
                     </div>
                     <div class="data">
-                        <input type="text" name="Numero" placeholder="Numero" required>
+                        <label>Rua</label>
+                        <input type="text" placeholder="Endereço" name="Endereco" required>
                     </div>
                     <div class="data">
+                        <label>Número</label>
+                        <input type="text" name="Numero" placeholder="Numero" maxlength="10" required>
+                    </div>
+                    <div class="data">
+                        <label>Complemento</label>
                         <input type="text" name="Complemento" placeholder="Complemento" required>
                     </div>
                     <div class="data">
-                        <input id="id_lock" name="CEP" placeholder="CEP" maxlength="">
-                    </div>
-                    <div class="data">
-                        <label>Seu Bairro</label>
+                        <label>Bairro</label>
                         <input type="text" name="Bairro" placeholder="Bairro" required>
                     </div>
                     <div class="data">
-                        <label>Sua Cidade</label>
+                        <label>Cidade</label>
                         <input type="text" name="Cidade" placeholder="Cidade" required>
                     </div>
                     <div class="data">
-                        <label>Escolha uma rede Social</label>
+                        <label>Estado</label>
+                        <input type="text" name="Estado" placeholder="Estado" required>
+                    </div>
+                    
+                    <div class="data">
+                        <label>Rede Social</label>
                         <select id="redeSocial" name="RedeSocial">
                             <option>...</option>
                             <option value="facebook">Facebook</option>
@@ -113,12 +119,12 @@
                         </select>
                     </div>
                     <div class="data">
-                        <label>Seu Site, se tiver</label>
+                        <label>Seu Site</label>
                         <input type="url" name="WebSite" placeholder="Web Site">
                     </div>
                     <div class="data">
-                        <label>Link da sua rede Social</label>
-                        <input type="url" name="Url" placeholder="Link">
+                        <label>Link</label>
+                        <input type="url" name="Url" placeholder="Link da Rede Social">
                     </div>
                     <div class="data">
                         <textarea name="Descricao" id="" cols="10" rows="5" placeholder="Sobre Sua Ong" required></textarea>
@@ -127,9 +133,6 @@
                         <button type="submit" id="enviar">Enviar</button></a>
                     </div>
 
-                    <div>
-                        {{message}}
-                    </div>
                 </form>
             </div>
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>

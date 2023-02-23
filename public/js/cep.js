@@ -1,9 +1,9 @@
 (function(){ 
 
-    const cep = document.querySelector("input[name=cep]");
+    const CEP = document.querySelector("input[name=CEP]");
 
-    cep.addEventListener('blur', e=> {
-        const value = cep.value.replace(/[^0-9]+/, '');
+    CEP.addEventListener('blur', e=> {
+        const value = CEP.value.replace(/[^0-9]+/, '');
         const url = `https://viacep.com.br/ws/${value}/json/`;
 
     fetch(url)
@@ -11,10 +11,10 @@
     .then( json => {
 
             if( json.logradouro ) {
-                document.querySelector('input[name=rua]').value = json.logradouro;
-                    document.querySelector('input[name=bairro]').value = json.bairro;
-                    document.querySelector('input[name=cidade]').value = json.localidade;
-                    document.querySelector('input[name=estado]').value = json.uf;
+                document.querySelector('input[name=Endereco]').value = json.logradouro;
+                    document.querySelector('input[name=Bairro]').value = json.bairro;
+                    document.querySelector('input[name=Cidade]').value = json.localidade;
+                    document.querySelector('input[name=Estado]').value = json.uf;
             }
         });
     });

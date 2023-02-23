@@ -13,14 +13,14 @@ export const contaOng = (req:Request, res:Response) =>{
     const message = req.flash('message')
     //console.log(error)
 
-    res.render('pages/contaOng',{message})
+    res.render('pages/contaOng')
 }
 
 export const contaOngPost = async (req:Request, res:Response) =>{
     //verificando as validações do usuário
 
     //recebendo as informações do usuário via body (POST)
-    const {Nome,Email,password,confirmpassword,Tel,CNPJ,Endereco,Numero,Complemento,CEP,Bairro,Cidade,Categoria,Descricao,WebSite,RedeSocial,Url} = req.body
+    const {Nome,Email,password,confirmpassword,Tel,CNPJ,Endereco,Numero,Complemento,CEP,Bairro,Cidade,Estado,Categoria,Descricao,WebSite,RedeSocial,Url} = req.body
 
     //se password for diferente de confirmpassword
     if(password != confirmpassword){
@@ -74,6 +74,7 @@ export const contaOngPost = async (req:Request, res:Response) =>{
             CEP,
             Bairro,
             Cidade,
+            Estado,
             Categoria,
             Descricao,
             WebSite,

@@ -33,6 +33,9 @@
                 </div>
             </div>
         </header>
+        <script>
+            alert("{{message}}")
+        </script>
         <!--header aqui-->
         <!--Conteudo da pagina-->
         <div class="geral">
@@ -45,7 +48,7 @@
                     </div>
                     <div class="data">
                         <label>Data de nascimento</label>
-                        <input type="date" name="dataNascimento" required>
+                        <input type="text" name="dataNascimento" class="verifica_numerico" onKeyPress="MascaraGenerica(this, 'DATA');" required>
                     </div>
                     <div class="data">
                         <label for="email">Seu melhor Email</label>
@@ -61,11 +64,11 @@
                     </div>
                     <div class="data">
                         <label>Seu CPF</label>
-                        <input id="id_lock" name="CPF" placeholder="CPF" type="text" maxlength="14" required>
+                        <input name="CPF" placeholder="CPF" type="text" maxlength="14" required class="verifica_numerico" onKeyPress="MascaraGenerica(this, 'CPF');">
                     </div>
                     <div class="data">
-                        <label>Telefone com DDD</label>
-                        <input id="id_lock" name="Tel" placeholder="Telefone" type="text" maxlength="14" required>
+                        <label>Telefone</label>
+                        <input name="Tel" placeholder="Telefone ou Celular" type="text" maxlength="14" class="verifica_numerico" onKeyPress="MascaraGenerica(this, 'CELULAR');" required>
                     </div>
                     <div class="data">
                         <label>Escolha uma rede Social</label>
@@ -94,15 +97,14 @@
                         <button type="submit" id="enviar">Enviar</button>
                     </div>
                     <div>
-                        <script>
-                            alert("{{message}}")
-                        </script>
                         
                     </div>
                 </form>
             </div>
-            <!--<script src="../js/pontoparaform.js"></script>
-            <script src="validandoemail.js"></script>-->
+
+            
+            <script src="../js/pontoparaform.js"></script>
+            <script src="validandoemail.js"></script>
         <div class="outraPagina">
             <div class="title2">Não é Voluntario? Crie como ONG:</div>
             <div class="btn2">
