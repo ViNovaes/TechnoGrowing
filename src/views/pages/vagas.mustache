@@ -5,9 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/cards.css">
-    <link rel="stylesheet" href="../css/header&footer.css">
-    <link rel="stylesheet" href="../css/section-page.css">
-    <link rel="stylesheet" href="../css/section-carrocel.css">
+    <link rel="stylesheet" href="../css/header&footer-page-vagas.css">
+    <link rel="stylesheet" href="../css/section-page-vagas.css">
+    <link rel="stylesheet" href="../css/section-carrocel-page-vagas.css">
     <link rel="stylesheet" href="../css/load.css">
     <title>Techno Growing | Vagas</title>
 </head>
@@ -44,40 +44,91 @@
         </div>
     </section>
     <div class ="volutario">Vagas de voluntariado</div>
-    <div class="categorias">
-        <label for="class">Selecione a categoria</label>
-            <select id="class">
-                <option value="todos">Todos</option>
-                <option value="animais">Animais</option>
-                <option value="reabilitacao">Reabilitação</option>
-                <option value="lgbt">LGBT</option>
-            </select>
+    <div class="busca">
+        <input type="text" id="filtroCards" class="form-control" onkeyup="aplicaFiltroCards()" onfocus="focar()" onblur="sair()" placeholder="Filtro...">
     </div>
     <section class="section2">
-        <div class="container-cards">
-            <div class="card">
-                <img src="../images/combate.png" class="card-media" alt="imagem aqui"/>
-                <div class="card-details">
-                    <h2 class="card-head">detales</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus excepturi odit, unde praesentium qui mollitia suscipit 
-                        nemo debitis repudiandae cumque inventore voluptatem, nihil optio sapiente voluptas quo sunt. Rem, dolorum.</p>
+        <div id="containerCards" class="containers-Geral">
+            <div class="row">
+            <div class="card-deck">
+                <!--inicio do card-->
+                <div class="card">
+                    <div class="card-body">
+                    <img src="../images/clinica.png" class="card-media">
+                    <h5 class="cardTitle">titulo <p class="categoria">: Web</p></h5>
+                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo aliquid ea porro. Autem doloremque dolores tenetur at vitae. Aspernatur assumenda facere ullam veritatis eaque consequuntur architecto atque cumque sequi? Voluptates!</p>
+                    <div class="descVaga2">
+                        <label class="lbldesc2">Horários e Endereço da vaga</label>
+                        <ul>
+                            <li><img src="../images/calendario.png"><p>Seg a Sex</p></li>
+                            <li><img src="../images/relogio-nove.png"><p>4 Horas</p></li>
+                            <li class="endereco">Endereço:</li>
+                        </ul>
+                    </div>
+                    <a href="../vaga" class="saiba">Saiba mais</a>
+                        <div class="btn">
+                            <button type="submit" id="entrar"><a href="../vaga">Ver mais</a></button>
+                        </div>
+                    </div>
                 </div>
-                <a href="../404" class="saiba">Saiba mais</a>
-                <div class="btn">
-                    <button type="submit" id="entrar"><a href="../404">Candidate-se</a></button>
+                <!--fim do card-->
+                <!--inicio do card-->
+                <div class="card">
+                    <div class="card-body">
+                    <img src="../images/clinica.png" class="card-media">
+                    <h5 class="cardTitle">titulo <p class="categoria">: desing</p></h5>
+                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo aliquid ea porro. Autem doloremque dolores tenetur at vitae. Aspernatur assumenda facere ullam veritatis eaque consequuntur architecto atque cumque sequi? Voluptates!</p>
+                    <div class="descVaga2">
+                        <label class="lbldesc2">Horários e Endereço da vaga</label>
+                        <ul>
+                            <li><img src="../calendario.png"><p>Seg a Sex</p></li>
+                            <li><img src="../relogio-nove.png"><p>4 Horas</p></li>
+                            <li class="endereco">Endereço:</li>
+                        </ul>
+                    </div>
+                    <a href="../vaga" class="saiba">Saiba mais</a>
+                        <div class="btn">
+                            <button type="submit" id="entrar"><a href="../vaga">Ver mais</a></button>
+                        </div>
+                    </div>
                 </div>
+                <!--fim do card--><!--inicio do card-->
+                <div class="card">
+                    <div class="card-body">
+                    <img src="../clinica.png" class="card-media">
+                    <h5 class="cardTitle">titulo <p class="categoria">: Ti</p></h5>
+                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo aliquid ea porro. Autem doloremque dolores tenetur at vitae. Aspernatur assumenda facere ullam veritatis eaque consequuntur architecto atque cumque sequi? Voluptates!</p>
+                    <div class="descVaga2">
+                        <label class="lbldesc2">Horários e Endereço da vaga</label>
+                        <ul>
+                            <li><img src="../calendario.png"><p>Seg a Sex</p></li>
+                            <li><img src="../relogio-nove.png"><p>4 Horas</p></li>
+                            <li class="endereco">Endereço:</li>
+                        </ul>
+                    </div>
+                    <a href="../vaga" class="saiba">Saiba mais</a>
+                        <div class="btn">
+                            <button type="submit" id="entrar"><a href="../vaga">Ver mais</a></button>
+                        </div>
+                    </div>
+                </div>
+                <!--fim do card-->
             </div>
-            
+        </div>
     </section>
     <!--footer aqui-->
+    <aside id="aviso">
+        <div class="infoADD">Como fazer uma pesquisa</div>
+        <div class="infoDesc"><p>Para fazer uma pesquisa, busque pelos tipos de vagas como web, desing e etc..</p></div>
+    </aside>
     <div class="loja">
         <p>Loja</p>
-        <a href="../loja"><img src="../images/carrinho-de-compras.png"></a>
+        <a href="../loja"><img src="../carrinho-de-compras.png"></a>
     </div>
     <footer class="footer-distributed">
         <div class="footer-right">
-            <a href="../404"><img src="../images/linkedin.png"></a>
-            <a href="../404"><img src="../images/facebook.png"></a>
+            <a href="../404"><img src="../linkedin.png"></a>
+            <a href="../404"><img src="../facebook.png"></a>
             <a href="../404"><img src="../images/instagram.png"></a>
         </div>
         <div class="footer-left">
@@ -94,5 +145,6 @@
     <!--footer aqui-->
     <script src="../js/carousel.js"></script>
     <script src="../js/load.js"></script>
+    <script src="../js/pesquisa.js"></script>
 </body>
 </html>

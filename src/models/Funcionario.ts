@@ -25,7 +25,8 @@ export const Funcionario = sequelize.define<FuncionarioInstance>("Funcionario,",
     codFunc:{
         primaryKey:true,
         type:DataTypes.INTEGER,
-        allowNull:false
+        allowNull:false,
+        autoIncrement:true
     },
     nome:{
         type:DataTypes.DATE,

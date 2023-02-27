@@ -3,8 +3,7 @@ import { Funcionario } from '../models/Funcionario';
 import { Loja } from '../models/Loja';
 import { Ong } from '../models/Ong';
 import { Voluntario } from '../models/Voluntario';
-import { Contato } from '../models/Contatos';
-
+import { Contatos } from '../models/Contatos';
 import {sequelize } from '../instances/mysql'
 
 export const home = async (req:Request, res:Response) => {
@@ -21,27 +20,33 @@ export const home = async (req:Request, res:Response) => {
 export const perfil = (req:Request, res:Response) =>{
     res.render('pages/perfil')
 }
-
 export const sobre = (req:Request, res:Response) =>{
     res.render('pages/sobre')
 }
-
 export const vagas = (req:Request, res:Response) =>{
     res.render('pages/vagas')
 }
-
 export const loja = (req:Request, res:Response) =>{
     res.render('pages/loja')
 }
-
-export const contato = (req:Request, res:Response) =>{
+export const contatos = (req:Request, res:Response) =>{
     res.render('pages/contato')
 }
-
 export const confirmCad = (req:Request, res:Response) =>{
     res.render('pages/confirmCad')
 }
-
-export const cadFinalizado = (req:Request, res:Response) =>{
+export const finalizado = (req:Request, res:Response) =>{
     res.render('pages/cadFinalizado')
+}
+export const confirma =(req:Request, res:Response)=>{
+    res.render('pages/confirmacao')
+}
+export const erro =(req:Request, res:Response)=>{
+    res.render('pages/404')
+}
+export const obrigado =(req:Request, res:Response)=>{
+    res.render('pages/obrigado')
+}
+export const vagaCriada = (req:Request, res:Response) =>{
+    res.render('pages/vagaCriada')
 }

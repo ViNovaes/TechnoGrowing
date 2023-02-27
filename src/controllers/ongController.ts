@@ -15,7 +15,9 @@ export const contaOng = (req:Request, res:Response) =>{
 
     res.render('pages/contaOng')
 }
-
+export const criarVaga = (req:Request, res:Response) =>{
+    res.render('pages/criarVaga')
+}
 export const contaOngPost = async (req:Request, res:Response) =>{
     //verificando as validações do usuário
 
@@ -89,14 +91,11 @@ export const contaOngPost = async (req:Request, res:Response) =>{
 
         req.session.userId = JSON.stringify(user.codONG)
 
-
-        req.flash('message','cadastro realizado com sucesso')
-
         //salvar a sessão
         //para garantir que meu usuário seja salvo
         //antes de redirecioná-lo para /
         req.session.save(() =>{
-            res.redirect('/cadfinalizado')
+            res.redirect('/ciarVaga')
         })
 
 

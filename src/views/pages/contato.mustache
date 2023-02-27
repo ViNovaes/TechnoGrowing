@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/header&footer.css">
+    <link rel="stylesheet" href="../css/header&footer-page-contato.css">
     <link rel="stylesheet" href="../css/contato.css">
     <link rel="stylesheet" href="../css/load.css">
     <title>Techno Growing | Contato ✉</title>
@@ -39,17 +39,21 @@
                 <p class="desc">Possui alguma duvida? preencha o formulario e o nosso time ira entrar em contato em breve 👍</p>
             </div>
             <div class="container2">
-                <form action="#">
+                <form action="https://formsubmit.co/erikoliveira.c@gmail.com" method="POST">
                     <div class="data">
-                        <input type="text" required placeholder="Nome Completo">
+                        <input type="text" name="Nome" required placeholder="Nome Completo">
                     </div>
                     <div class="data">
-                        <input type="email" required placeholder="Seu Email">
+                        <input type="email" name="Email" required placeholder="Seu Email">
                     </div>
                     <div class="data">
-                        <textarea name="" cols="30" rows="6" placeholder="Como podemos ajudar?"></textarea>
+                        <textarea name="Mensagem" cols="30" rows="6" placeholder="Como podemos ajudar?"></textarea>
+                        <!--desabilitar reCaptcha-->
+                        <input type="hidden" name="_captcha" value="false">
+                        <!--pagina de agradecimento-->
+                        <input type="hidden" name="_next" value="http://localhost:5080/obrigado">
                     </div>
-                    <button type="submit" id="enviar"><a href="#">Enviar</a></button>
+                    <button type="submit" id="enviar">Enviar</button>
                 </form>
             </div>
         </div>
@@ -57,17 +61,17 @@
         <!--footer aqui se prescisar-->
         <footer class="footer-distributed">
             <div class="footer-right">
-                <a href="#"><img src="../images/linkedin.png"></a>
-                <a href="#"><img src="../images/facebook.png"></a>
-                <a href="#"><img src="../images/instagram.png"></a>
+                <a href="../404"><img src="../images/linkedin.png"></a>
+                <a href="../404"><img src="../images/facebook.png"></a>
+                <a href="../404"><img src="../images/instagram.png"></a>
             </div>
             <div class="footer-left">
                 <p class="footer-links">
-                    <a class="link-1" href="../">Home</a>
+                    <a class="link-1" href="../login">Entrar</a>
                     <a href="../perfil">Perfil</a>
-                    <a href="../vagas"><li>Vagas</li></a>
-                    <a href="../loja">Loja</a>
+                    <a href="..pages/404">Parceiros</a>
                     <a href="../sobre">Sobre</a>
+                    <a href="../contato">Contato</a>
                 </p>
                 <p>Techno Growing &copy; 2022</p>
             </div>

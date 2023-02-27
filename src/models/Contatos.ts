@@ -6,25 +6,29 @@ import {sequelize} from '../instances/mysql'
 export interface ContatoInstance extends Model{
 
     codContato: number,
-    nome: String,
-    email: String,
-    mensagem: number,
+    Nome: String,
+    Email: String,
+    Mensagem: String,
 }
 
-export const Contato = sequelize.define<ContatoInstance>("Contato,",{
+export const Contatos = sequelize.define<ContatoInstance>("Contato,",{
 
     codContato:{
         primaryKey:true,
+        autoIncrement:true,
         type:DataTypes.INTEGER
     },
-    nome:{
-        type: DataTypes.STRING
+    Nome:{
+        type: DataTypes.STRING,
+        allowNull:false
     },
-    email:{     
-        type: DataTypes.STRING
+    Email:{     
+        type: DataTypes.STRING,
+        allowNull:false
     },    
-    mensagem:{
-        type: DataTypes.STRING
+    Mensagem:{
+        type: DataTypes.STRING,
+        allowNull:false
     }
 },
 {
