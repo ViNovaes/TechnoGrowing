@@ -25,7 +25,7 @@ router.get('/contaOng',ongController.contaOng)
 
 router.get('/confirmCad',homeController.confirmCad)
 
-router.get('/cadFinalizado',homeController.finalizado)
+router.get('/cadFinalizado',homeController.cadFinalizado)
 
 router.get('/404', homeController.erro)
 

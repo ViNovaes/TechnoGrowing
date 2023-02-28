@@ -92,7 +92,8 @@
                         </div>
                     </div>
                 </div>
-                <!--fim do card--><!--inicio do card-->
+                <!--fim do card-->
+                <!--inicio do card-->
                 <div class="card">
                     <div class="card-body">
                     <img src="../images/combate.png" class="card-media">
@@ -113,6 +114,30 @@
                     </div>
                 </div>
                 <!--fim do card-->
+
+                {{#tbvagasong}}
+                <div class="card">
+                    <div class="card-body">
+                    <img src="../images/combate.png" class="card-media">
+                    <h5 class="cardTitle">{{Vaga}}<p class="categoria">: {{Descricao}}</p></h5>
+                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo aliquid ea porro. Autem doloremque dolores tenetur at vitae. Aspernatur assumenda facere ullam veritatis eaque consequuntur architecto atque cumque sequi? Voluptates!</p>
+                    <div class="descVaga2">
+                        <label class="lbldesc2">Horários e Endereço da vaga</label>
+                        <ul>
+                            <li><img src="../images/calendario.png"><p>{{Horario}}</p></li>
+                            <li><img src="../images/relogio-nove.png"><p>{{Periodo}}</p></li>
+                            <li class="endereco">Endereço: {{Endereco}}</li>
+                        </ul>
+                    </div>
+                    <a href="../404" class="saiba">Saiba mais</a>
+                        <div class="btn">
+                            <button type="submit" id="entrar"><a href="../vaga">Ver mais</a></button>
+                        </div>
+                    </div>
+                </div>
+                {{/tbvagasong}}
+
+
             </div>
         </div>
     </section>

@@ -28,6 +28,7 @@ export const contaOngPost = async (req:Request, res:Response) =>{
     if(password != confirmpassword){
         //enviar uma mensagem de erro ao usuário com flashmessage
         
+        // alert('As senhas não conferem, tente novamente');
         req.flash('message','As senhas não conferem, tente novamente')
 
         res.redirect('/contaOng')

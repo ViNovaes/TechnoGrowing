@@ -35,7 +35,7 @@ export const contatos = (req:Request, res:Response) =>{
 export const confirmCad = (req:Request, res:Response) =>{
     res.render('pages/confirmCad')
 }
-export const finalizado = (req:Request, res:Response) =>{
+export const cadFinalizado = (req:Request, res:Response) =>{
     res.render('pages/cadFinalizado')
 }
 export const confirma =(req:Request, res:Response)=>{
@@ -49,4 +49,7 @@ export const obrigado =(req:Request, res:Response)=>{
 }
 export const vagaCriada = (req:Request, res:Response) =>{
     res.render('pages/vagaCriada')
+}
+export const criarVaga = (req:Request, res:Response) =>{
+    res.render('pages/criarVaga')
 }

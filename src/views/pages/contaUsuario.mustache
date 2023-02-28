@@ -34,7 +34,6 @@
             </div>
         </header>
         <script>
-            alert("{{message}}")
         </script>
         <!--header aqui-->
         <!--Conteudo da pagina-->
@@ -48,7 +47,7 @@
                     </div>
                     <div class="data">
                         <label>Data de nascimento</label>
-                        <input type="text" name="dataNascimento" class="verifica_numerico" onKeyPress="MascaraGenerica(this, 'DATA');" required>
+                        <input type="date" max="2011-12-31" min="1980-01-01" name="dataNascimento" class="verifica_numerico" onKeyPress="MascaraGenerica(this, 'DATA');" required>
                     </div>
                     <div class="data">
                         <label for="email">Seu melhor Email</label>
@@ -67,8 +66,8 @@
                         <input name="CPF" placeholder="CPF" type="text" maxlength="14" required class="verifica_numerico" onKeyPress="MascaraGenerica(this, 'CPF');">
                     </div>
                     <div class="data">
-                        <label>Telefone</label>
-                        <input name="Tel" placeholder="Telefone ou Celular" type="text" maxlength="14" class="verifica_numerico" onKeyPress="MascaraGenerica(this, 'CELULAR');" required>
+                        <label>Celular</label>
+                        <input name="Tel" placeholder="Celular" type="text" maxlength="15" class="verifica_numerico" onKeyPress="MascaraGenerica(this, 'CELULAR');" required>
                     </div>
                     <div class="data">
                         <label>Escolha uma rede Social</label>

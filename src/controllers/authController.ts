@@ -9,10 +9,9 @@ export const login = (req:Request, res:Response) =>{
 
 export const contaUsuario = (req:Request, res:Response) =>{
 
-    const message = req.flash('message')
     //console.log(error)
 
-    res.render('pages/contaUsuario',{message})
+    res.render('pages/contaUsuario')
 }
 
 export const contaUsuarioPost = async (req:Request, res:Response) =>{
@@ -24,8 +23,9 @@ export const contaUsuarioPost = async (req:Request, res:Response) =>{
     //se password for diferente de confirmpassword
     if(password != confirmpassword){
         //enviar uma mensagem de erro ao usuário com flashmessage
+        const message = req.flash('message')
         
-        req.flash('message','As senhas não conferem, tente novamente')
+        alert ('As senhas não conferem, tente novamente')
 
         res.redirect('/contaUsuario')
         
@@ -41,6 +41,7 @@ export const contaUsuarioPost = async (req:Request, res:Response) =>{
 
     //se o usuário existir exibir uma flash message
     if(checkIfUserExists){
+        const message = req.flash('message')
         req.flash('message','O e-mail já está em uso')
         res.redirect('/contaUsuario')
 

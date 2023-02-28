@@ -19,6 +19,7 @@
                 <div class="logo">
                     <img src="../images/logotipo_sem_ONG- sem fundo.png">
                 </div> 
+
                 <div class="menu">
                     <nav>
                         <ul>
@@ -30,6 +31,8 @@
                         </ul>
                     </nav>
                 </div>
+
+                <link rel="stylesheet" href="css/formulario.css">
             </div>
         </header>
         <!--header aqui-->
@@ -48,16 +51,18 @@
             <div class="container2">
                 <div class="texto">Fazer Login</div>
                 <div class="container">
-                    <form action="#">
+                    <form action="" method="get">
+                        
                         <div class="data">
-                            <input type="email" placeholder="Email" required>
+                            <input type="email" id="Email" placeholder="email" required>
                         </div>
                         <div class="data">
-                            <input type="password" placeholder="Senha" required>
+                            <input type="password" id="Senha" placeholder="Senha" required>
                         </div>
                         <div class="btn2">
                             <a href="../login"><button type="submit" id="entrar">Entrar</button></a>
                         </div>
+                        
                     </form>
                 </div>
             </div>
@@ -66,5 +71,6 @@
         <!--footer aqui se prescisar-->
     </div>
     <script src="../js/load.js"></script>
+    <script src="../js/login.js"></script>
 </body>
 </html>
